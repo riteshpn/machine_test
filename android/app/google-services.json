@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "23094452380",
+    "project_id": "all-firebase-fc389",
+    "storage_bucket": "all-firebase-fc389.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:23094452380:android:2bf9c816969192a8b64d59",
+        "android_client_info": {
+          "package_name": "com.example.all_cocept_firebae"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "23094452380-78kiknac9c40a6s2pdm8miev6j26gejr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVdIKAceCi8jtBYIWZtr-PVpHJjZYN_2U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "23094452380-78kiknac9c40a6s2pdm8miev6j26gejr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "23094452380-hlh3mteoqrl88n64ffk86573aohplgce.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.allCoceptFirebae.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:23094452380:android:02986c1b5299155fb64d59",
+        "android_client_info": {
+          "package_name": "com.example.machine_test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "23094452380-78kiknac9c40a6s2pdm8miev6j26gejr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVdIKAceCi8jtBYIWZtr-PVpHJjZYN_2U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "23094452380-78kiknac9c40a6s2pdm8miev6j26gejr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "23094452380-hlh3mteoqrl88n64ffk86573aohplgce.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.allCoceptFirebae.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
