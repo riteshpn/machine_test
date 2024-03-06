@@ -25,8 +25,7 @@ class _LoginPageState extends State<LoginPage> {
           email: _emailController.text,
           password: _passwordController.text,
         );
-        print('User logged in: ${userCredential.user!.email}');
-
+      
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(builder: (context) => HomeScreen()),
@@ -45,10 +44,10 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Login'),
+        title: const Text('Login'),
       ),
       body: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Form(
           key: _formKey,
           child: Column(
@@ -64,7 +63,7 @@ class _LoginPageState extends State<LoginPage> {
                   return null;
                 },
               ),
-              SizedBox(height: 12.0),
+              const SizedBox(height: 12.0),
               CustomTextField(
                 controller: _passwordController,
                 labelText: 'Password',
@@ -76,14 +75,14 @@ class _LoginPageState extends State<LoginPage> {
                   return null;
                 },
               ),
-              SizedBox(height: 20.0),
+              const SizedBox(height: 20.0),
               _loading
-                  ? CircularProgressIndicator()
+                  ? const CircularProgressIndicator()
                   : ElevatedButton(
                       onPressed: () {
                         _login(context);
                       },
-                      child: Text('Login'),
+                      child: const Text('Login'),
                     ),
             ],
           ),

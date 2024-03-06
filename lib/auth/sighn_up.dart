@@ -27,14 +27,12 @@ class _SignupPageState extends State<SignupPage> {
           email: _emailController.text,
           password: _passwordController.text,
         );
-        print('User created: ${userCredential.user!.email}');
-        // Navigate to the login page
+
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => LoginPage()),
         );
 
-        // Clear text fields
         _emailController.clear();
         _passwordController.clear();
       } on FirebaseAuthException catch (e) {
@@ -53,11 +51,12 @@ class _SignupPageState extends State<SignupPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blue.shade100,
       appBar: AppBar(
-        title: Text('Sign Up'),
+        title: const Text('Sign Up'),
       ),
       body: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Form(
           key: _formKey,
           child: Column(
@@ -73,7 +72,7 @@ class _SignupPageState extends State<SignupPage> {
                   return null;
                 },
               ),
-              SizedBox(height: 12.0),
+              const SizedBox(height: 12.0),
               CustomTextField(
                 controller: _passwordController,
                 labelText: 'Password',
@@ -85,9 +84,9 @@ class _SignupPageState extends State<SignupPage> {
                   return null;
                 },
               ),
-              SizedBox(height: 20.0),
+              const SizedBox(height: 20.0),
               _loading
-                  ? SizedBox(
+                  ? const SizedBox(
                       height: 24,
                       width: 24,
                       child: CircularProgressIndicator(),
@@ -96,16 +95,43 @@ class _SignupPageState extends State<SignupPage> {
                       onPressed: () {
                         _signup(context);
                       },
-                      child: Text('Sign Up'),
+                      child: const Text('Sign Up'),
                     ),
               if (_errorMessage.isNotEmpty)
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 8.0),
                   child: Text(
                     _errorMessage,
-                    style: TextStyle(color: Colors.red),
+                    style: const TextStyle(color: Colors.red),
                   ),
                 ),
+              TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => LoginPage()),
+                  );
+                },
+                child: Text(
+                  'Already have an account? Log in',
+                  style: TextStyle(color: Colors.blue),
+                ),
+              ),
+
+              //     : ElevatedButton(
+              //         onPressed: () {
+              //           _signup(context);
+              //         },
+              //         child: const Text('Sign Up'),
+              //       ),
+              // if (_errorMessage.isNotEmpty)
+              //   Padding(
+              //     padding: const EdgeInsets.symmetric(vertical: 8.0),
+              //     child: Text(
+              //       _errorMessage,
+              //       style: const TextStyle(color: Colors.red),
+              //     ),
+              //   ),
             ],
           ),
         ),
